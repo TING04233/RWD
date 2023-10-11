@@ -1,0 +1,772 @@
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ececec;
+  font-family: "Libre Caslon Text", serif;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+/* ========= 導覽列 =========== */
+header.header{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header.header div.block {
+  /* border: 1px solid rebeccapurple; */
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 3px #cccccc;
+  /* margin: 0 auto; */
+
+}
+
+header.header nav.nav {
+  /* border: 1px solid darkgreen; */
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header.header nav.nav a.logo {
+  width: 140px;
+  height: 60px;
+  margin: 0;
+}
+
+header.header nav.nav a.logo > img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 200px;
+  height: 50px;
+  margin-top: 4px;
+}
+/* ========== 漢堡按鈕 ============ */
+header.header nav.nav span{
+  display: none;
+  /* border: 1px solid violet; */
+  width: 35px;
+  height: 35px;
+  /* background-color: black; */
+  margin-left: 15px;
+  position: relative;
+}
+
+header.header nav.nav span::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0px 7px 0px black, 0px -7px 0px black;
+  
+}
+
+  /* ========== 隱藏側邊攔 ========= */
+  div.flex_box{
+    
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 62px;
+    z-index: 2;
+    height: 100%;
+    /* transform: translateX(-100%); */
+  }
+
+  main.main div.left{
+    width: 400px;
+    background-color: #fff;
+    max-height: calc(100vh - 61px);
+    overflow: auto;
+  }
+
+  div.right{
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    opacity: 20%;
+  }
+
+  main.main ul.ul_list {
+    /* border: 1px solid blue; */
+    margin: 0;
+    max-width: 200px;
+    padding: 0;
+  }
+  
+  main.main ul.ul_list > li {
+    /* border: 1px solid salmon; */
+    list-style: none;
+    position: relative;
+  }
+  
+  main.main ul.ul_list li:hover ul{
+    display: block;
+  }
+  
+  main.main ul.ul_list li > a {
+    /* border: 1px solid darkgreen; */
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    display: inline-block;
+    margin: 15px;
+    
+  }
+/* ========== 隱藏側邊攔 三角形 ======== */
+main.main ul.ul_list li > a::after{
+  content:'';
+  display: inline-block;
+  border: 5px solid ;
+  border-color: black transparent transparent transparent;
+  top:24px;
+  right: 15px;
+  position: absolute;
+}
+/* ============ 導覽列 選單 ========= */
+
+header.header ul.ul_list {
+  /* border: 1px solid purple; */
+  display: flex;
+  margin: 0;
+  
+}
+
+header.header ul.ul_list > li {
+  /* border: 1px salmon; */
+  list-style: none;
+
+}
+
+header.header ul.ul_list li:hover ul{
+  display: block;
+}
+
+header.header ul.ul_list li > a {
+  /* border: 1px solid darkgreen; */
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  transform: scale(1, 1);
+  display: inline-block;
+  margin: 0 30px;
+  margin-top: 20px;
+}
+/* ================ */
+header.header ul.essay{
+  /* border: 1px solid red; */
+  position: absolute;
+  padding: 0;
+  background-color: white;
+  top: 65%;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 2px #cccccc;
+  display: none;
+  
+  
+}
+
+
+header.header ul.essay li{
+  padding: 0;
+  /* border: 1px solid blue; */
+  list-style: none;
+  /* padding-bottom: 15px; */
+}
+
+header.header ul.essay li > a{
+  padding-bottom: 15px;
+  font-size: 14PX;
+}
+
+
+
+header.header ul.ul_list li a:hover {
+  color: rgb(103, 103, 103);
+  transform: scale(1.1);
+}
+
+/* ============ 導覽列 icon ========= */
+header.header div.nav_icon {
+  display:flex;
+  align-items: center;
+  /* border: 1px solid darkgreen; */
+  text-align: center;
+  max-width: 200px;
+}
+
+header.header div.nav_icon a {
+  display: inline-block;
+  text-decoration: none;
+  /* border: 1px solid darkgreen; */
+}
+
+header.header div.nav_icon a img {
+  /* border: 1px solid darkorchid; */
+  display: inline-block;
+  margin: 4px 6px;
+  width: 23px;
+  height: 23px;
+}
+/* ============ 會員登入 ========== */
+
+
+main.main form.form{
+  border: 5px solid white;
+  width: 400px;
+  margin: 50px auto;
+  height: 460px;
+  
+  
+}
+main.main form.form label{
+  margin-bottom: 5px;
+  font-weight: 600;
+  display: block;
+  
+  
+ 
+}
+
+main.main form.form input{
+  padding: 8px;
+  padding-left: 10px;
+  border-radius: 3px;
+  border: 2px solid #cccccc;
+  outline:none;
+  size: "";
+
+}
+
+main.main form.form div.remember label{
+  display: inline-block;
+}
+
+
+main.main form.form h2{
+  text-align: center;
+}
+
+main.main form.form div{
+padding: 15px;
+margin-left: 20px;
+width: 300px;
+margin: 0 auto;
+}
+
+main.main form.form div.btn a{
+  border: 1px solid rebeccapurple;
+  display: block;
+}
+
+main.main form.form div.pwd > a{
+  display: block;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+main.main form.form div button{
+  padding: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* -------- main 575.98------------- */
+
+@media screen and (max-width: 575.98px){
+  main.main{
+    width: 100%;
+  }
+
+main.main form.form{
+  /* border: 2px solid darkgoldenrod; */
+  border: 5px solid white;
+  width: 350px;
+  margin: 50px auto;
+  height: 460px;
+  
+  
+}
+main.main form.form label{
+  /* border: 2px solid darkblue; */
+
+  margin-bottom: 5px;
+  font-weight: 600;
+  display: block;
+  
+  
+ 
+}
+
+main.main form.form input{
+  padding: 8px;
+  padding-left: 10px;
+  border-radius: 3px;
+  border: 2px solid #cccccc;
+  outline:none;
+  size: "";
+
+}
+
+main.main form.form div.remember label{
+  display: inline-block;
+}
+
+
+main.main form.form h2{
+  text-align: center;
+}
+
+main.main form.form div{
+padding: 15px;
+margin-left: 20px;
+width: 300px;
+margin: 0 auto;
+}
+
+main.main form.form div.btn a{
+  border: 1px solid rebeccapurple;
+  display: block;
+}
+
+main.main form.form div.pwd > a{
+  display: block;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+main.main form.form div button{
+  padding: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+}
+
+/*-------------- nav 575.98 -------------  */
+
+@media screen and (max-width: 575.98px) {
+  header.header div.block {
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+  }
+
+  header.header nav.nav span{
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+  
+  header.header div.nav_icon a:nth-child(2){
+    display: none; 
+  }
+
+  header.header nav.nav a.logo > img {
+    /* margin-left: 40px; */
+    /* border: 1px solid darkgoldenrod; */
+  }
+
+  header.header div.nav_icon {
+   /* border: 1px solid darkblue; */
+  }
+
+  header.header nav.nav a.logo{
+    /* border: 1px solid forestgreen; */
+    /* width: 100px; */
+  }
+  
+  div.flex_box{
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on{
+    transform: translateX(0%);
+  }
+
+  div.flex_box ul.ul_list>li a{
+    
+  }
+
+  div.down{
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span{
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a{
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+}
+/* ------ nav 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-110%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(-4%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-110%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(-6%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-110%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(-4.5%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+/* ============ footer ========== */
+
+footer{
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+footer div.footer_flex {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  min-width: 1200px;
+  
+}
+
+footer div.customer {
+  /* border: 2px solid purple; */
+}
+
+footer div.customer ul {
+  padding: 0;
+}
+
+footer div.customer ul li > a {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(50, 50, 50);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+footer div.customer ul > li {
+  list-style: none;
+}
+
+
+footer div.connection ul > li {
+  list-style: none;
+}
+
+footer div.connection ul {
+  padding: 0;
+}
+
+footer div.community p {
+  width: 150px;
+  margin: 0 auto;
+}
+
+footer div.community p a {
+  margin: 0 10px;
+}
+
+footer div.community p a > img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p.reference {
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(255, 45, 45);
+  font-weight: bold;
+  margin:10px auto;
+}
+
+/* ------ footer 375px - 575.98px------ */
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 100%;
+   }
+}
+
+
+/*-------footer 575.98 --------*/
+@media screen and (max-width:575.98px){
+  footer{
+    /* border: 1px solid saddlebrown; */
+    width: 100%;
+    
+  }
+
+  footer div.footer_flex{
+    display: grid;
+    row-gap: 20px;
+    justify-content: flex-start;
+  }
+
+  footer div.customer{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer div.connection{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer p.reference{
+    /* border: 1px solid red ; */
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+/* ------ footer 375px - 575.98px------ */
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 100%;
+   }
+}
+
+/* ------ footer 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+  
+  footer div.footer_flex {
+   /* border: 1px solid darkblue; */
+    min-width: 550px;
+  }
+  
+}
+
+/* ---- footer 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 600px;
+   }
+}
+
+/* ---- footer 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 600px;
+   }
+  }

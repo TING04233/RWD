@@ -1,0 +1,1161 @@
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ececec;
+  font-family: "Libre Caslon Text", serif;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+/* ========= 導覽列 =========== */
+header.header{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header.header div.block {
+  /* border: 1px solid rebeccapurple; */
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 3px #cccccc;
+  /* margin: 0 auto; */
+
+}
+
+header.header nav.nav {
+  /* border: 1px solid darkgreen; */
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header.header nav.nav a.logo {
+  width: 140px;
+  height: 60px;
+  margin: 0;
+}
+
+header.header nav.nav a.logo > img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 200px;
+  height: 50px;
+  margin-top: 4px;
+}
+/* ========== 漢堡按鈕 ============ */
+header.header nav.nav span{
+  display: none;
+  /* border: 1px solid violet; */
+  width: 35px;
+  height: 35px;
+  /* background-color: black; */
+  margin-left: 15px;
+  position: relative;
+}
+
+header.header nav.nav span::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0px 7px 0px black, 0px -7px 0px black;
+  
+}
+
+  /* ========== 隱藏側邊攔 ========= */
+  div.flex_box{
+    
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 62px;
+    z-index: 2;
+    height: 100%;
+    /* transform: translateX(-100%); */
+  }
+
+  main.main div.left{
+    width: 400px;
+    background-color: #fff;
+    max-height: calc(100vh - 61px);
+    overflow: auto;
+  }
+
+  div.right{
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    opacity: 20%;
+  }
+
+  main.main ul.ul_list {
+    /* border: 1px solid blue; */
+    margin: 0;
+    max-width: 200px;
+    padding: 0;
+  }
+  
+  main.main ul.ul_list > li {
+    /* border: 1px solid salmon; */
+    list-style: none;
+    position: relative;
+  }
+  
+  main.main ul.ul_list li:hover ul{
+    display: block;
+  }
+  
+  main.main ul.ul_list li > a {
+    /* border: 1px solid darkgreen; */
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    display: inline-block;
+    margin: 15px;
+    
+  }
+/* ========== 隱藏側邊攔 三角形 ======== */
+main.main ul.ul_list li > a::after{
+  content:'';
+  display: inline-block;
+  border: 5px solid ;
+  border-color: black transparent transparent transparent;
+  top:24px;
+  right: 15px;
+  position: absolute;
+}
+/* ============ 導覽列 選單 ========= */
+
+header.header ul.ul_list {
+  /* border: 1px solid purple; */
+  display: flex;
+  margin: 0;
+  
+}
+
+header.header ul.ul_list > li {
+  /* border: 1px salmon; */
+  list-style: none;
+
+}
+
+header.header ul.ul_list li:hover ul{
+  display: block;
+}
+
+header.header ul.ul_list li > a {
+  /* border: 1px solid darkgreen; */
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  transform: scale(1, 1);
+  display: inline-block;
+  margin: 0 30px;
+  margin-top: 20px;
+}
+/* ================ */
+header.header ul.essay{
+  /* border: 1px solid red; */
+  position: absolute;
+  padding: 0;
+  background-color: white;
+  top: 65%;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 2px #cccccc;
+  display: none;
+  
+  
+}
+
+
+header.header ul.essay li{
+  padding: 0;
+  /* border: 1px solid blue; */
+  list-style: none;
+  /* padding-bottom: 15px; */
+}
+
+header.header ul.essay li > a{
+  padding-bottom: 15px;
+  font-size: 14PX;
+}
+
+
+
+header.header ul.ul_list li a:hover {
+  color: rgb(103, 103, 103);
+  transform: scale(1.1);
+}
+
+/* ============ 導覽列 icon ========= */
+header.header div.nav_icon {
+  display:flex;
+  align-items: center;
+  /* border: 1px solid darkgreen; */
+  text-align: center;
+  max-width: 200px;
+}
+
+header.header div.nav_icon a {
+  display: inline-block;
+  text-decoration: none;
+  /* border: 1px solid darkgreen; */
+}
+
+header.header div.nav_icon a img {
+  /* border: 1px solid darkorchid; */
+  display: inline-block;
+  margin: 4px 6px;
+  width: 23px;
+  height: 23px;
+}
+
+
+/*-------------- nav 575.98 -------------  */
+
+@media screen and (max-width: 575.98px) {
+  header.header div.block {
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+  }
+
+  header.header nav.nav span{
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+  
+  header.header div.nav_icon a:nth-child(2){
+    display: none; 
+  }
+
+  header.header nav.nav a.logo > img {
+    /* margin-left: 40px; */
+    /* border: 1px solid darkgoldenrod; */
+  }
+
+  header.header div.nav_icon {
+   /* border: 1px solid darkblue; */
+  }
+
+  header.header nav.nav a.logo{
+    /* border: 1px solid forestgreen; */
+    /* width: 100px; */
+  }
+  
+  div.flex_box{
+    display: flex;
+    transform: translateX(-110%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on{
+    transform: translateX(0%);
+  
+  }
+
+  div.flex_box ul.ul_list>li a{
+    
+  }
+
+  div.down{
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span{
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a{
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ------ nav 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+/* ========= 首頁 / 潮流話題 / 球鞋激推 =========== */
+
+main.main{
+  background-color: #fff;
+  max-width: 1200px;
+  width: 100%;
+  margin:0 auto;
+}
+
+main.main div.sort ul.sort_display {
+  margin: 0;
+  /* border: 1px solid green; */
+  padding: 0;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+main.main div.sort ul.sort_display li {
+  list-style: none;
+  /* border: 1px solid darkblue; */
+  margin-left: 10px;
+}
+
+main.main div.sort ul.sort_display li > a:hover{
+  color: gray
+}
+
+main.main div.sort ul.sort_display li::before {
+  content: "/";
+  
+}
+
+main.main div.sort ul.sort_display > li:first-child::before {
+  display: none;
+}
+
+main.main ul.sort_display > li a :hover{
+  color: aqua;
+}
+
+main.main div.sort ul.sort_display li > a {
+  /* border: 1px solid  blueviolet; */
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* ============ main 文章一 ========== */
+
+main.main div.theme h1{
+  font-size: 32px;
+  text-align: center;
+  border-bottom: 2px solid gray;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom:15px ;
+  
+}
+
+main.main div.bigpic{
+  /* border: 1px solid darkblue; */
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+main.main div.bigpic > img{
+  display: block;
+  width: 100%;
+}
+
+main.main div.bigpic div.content_box > p{
+/* border: 1px solid darkgreen; */
+text-align: center;
+font-size: 16px;
+max-width: 700px;
+margin: 0 auto;
+margin-top: 40px;
+line-height: 30px;
+}
+
+/* ======= 文章 575.98 ========= */
+@media screen and (max-width:575.98px){
+
+  main.main div.theme h1{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    margin: 5px;
+    padding-top: 5px;
+    
+  }
+  
+  main.main div.bigpic{
+    /* border: 1px solid darkblue; */
+    padding: 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  main.main div.bigpic div.content_box > p{
+  /* border: 1px solid darkgreen; */
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 25px;
+  }
+  
+}
+
+/* ------ 文章 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+  main.main div.theme h1{
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    margin: 5px;
+    padding-top: 5px;
+    
+  }
+  
+  main.main div.bigpic{
+    /* border: 1px solid darkblue; */
+    padding: 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  main.main div.bigpic div.content_box > p{
+  /* border: 1px solid darkgreen; */
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 25px;
+  }
+}
+/* ------ 文章 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  main.main div.theme h1{
+    font-size: 26px;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    margin: 5px;
+    padding-top: 5px;
+    
+  }
+  
+  main.main div.bigpic{
+    /* border: 1px solid darkblue; */
+    padding: 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  main.main div.bigpic div.content_box > p{
+  /* border: 1px solid darkgreen; */
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 25px;
+  }
+}
+
+
+/* ============ 文章二 ========== */
+main.main div.bigpictwo{
+  /* border: 1px solid darkblue; */
+  width: 700px;
+  margin: 40px auto;
+}
+
+main.main div.bigpictwo div.img_block{
+  cursor: pointer;
+  /* border: 1px solid darkmagenta; */
+}
+
+main.main div.bigpictwo div.img_block > img{
+  /* border: 1px solid chocolate; */
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+main.main div.bigpictwo div.content_boxtwo > p{
+  /* border: 1px solid darkgreen; */
+text-align: center;
+font-size: 16px;
+width: 700px;
+margin: 50px auto;
+line-height: 30px;
+}
+
+main.main div.bigpictwo div.content_boxtwo{
+  /* border:1px solid darkgoldenrod; */
+  padding-bottom: 80px;
+}
+
+main.main div.bigpictwo div.most_img{
+  /* border: 2px solid darkgoldenrod; */
+  text-align: center;
+  width: 700px;
+}
+
+
+main.main div.bigpictwo div.most_img > img{
+  display: inline-block;
+  width:100px;
+  height: 100px;
+  /* border: 1px solid chocolate; */
+  cursor: pointer;
+  margin: 80px 0;
+}
+
+/* ============ img btn ========== */
+
+main.main div.btns{
+  /* border: 1px solid dodgerblue; */
+  display: flex;
+  justify-content: center;
+}
+
+main.main div.btns div.btn{
+  cursor: pointer;
+  border: 2px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+main.main div.btns div.btn:nth-child(2){
+  background-color: black;
+}
+
+/* ------ 文章二 375px - 575.98px------ */
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  main.main div.bigpictwo{
+    /* border: 4px solid darkblue; */
+    width: 100%;
+    padding:0 20px 10PX;
+  }
+  
+  main.main div.bigpictwo div.img_block{
+    /* border: 2px solid darkmagenta; */
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+  
+  main.main div.bigpictwo div.img_block > img{
+    /* border: 1px solid rgb(230, 230, 189); */
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo > p{
+    /* border: 1px solid darkgreen; */
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  margin: 20px auto;
+  line-height: 25px;
+  padding: 13px;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo{
+    /* border:1px solid darkgoldenrod; */
+    padding-bottom: 80px;
+  }
+  
+  main.main div.bigpictwo div.most_img{
+    /* border: 3px solid darkgoldenrod; */
+    text-align: center;
+    width: 100%;
+    /* padding:5px; */
+    /* margin-right: 15px; */
+  }
+  
+  main.main div.bigpictwo div.most_img > img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid chocolate; */
+    margin: 20px 0px;
+    /* margin-left: 5px; */
+  }
+  
+  /* ============ img btn ========== */
+  
+  main.main div.btns{
+    /* border: 1px solid dodgerblue; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  main.main div.btns div.btn{
+    border: 2px solid black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  main.main div.btns div.btn:nth-child(2){
+    background-color: black;
+  }
+}
+
+
+
+/* ============ 文章二 575.98px ========== */
+
+@media screen and (max-width:575.98px){
+
+
+main.main div.bigpictwo{
+  /* border: 4px solid darkblue; */
+  width: 100%;
+  padding:0 20px 10PX;
+}
+
+main.main div.bigpictwo div.img_block{
+  /* border: 2px solid darkmagenta; */
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+main.main div.bigpictwo div.img_block > img{
+  /* border: 1px solid rgb(230, 230, 189); */
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+main.main div.bigpictwo div.content_boxtwo > p{
+  /* border: 1px solid darkgreen; */
+text-align: center;
+font-size: 16px;
+max-width: 700px;
+margin: 20px auto;
+line-height: 25px;
+padding: 13px;
+}
+
+main.main div.bigpictwo div.content_boxtwo{
+  /* border:1px solid darkgoldenrod; */
+  padding-bottom: 80px;
+}
+
+main.main div.bigpictwo div.most_img{
+  /* border: 3px solid darkgoldenrod; */
+  text-align: center;
+  width: 100%;
+  /* padding:5px; */
+  /* margin-right: 15px; */
+}
+
+main.main div.bigpictwo div.most_img > img{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid chocolate; */
+  margin: 20px 0px;
+  /* margin-left: 5px; */
+}
+
+/* ============ img btn ========== */
+
+main.main div.btns{
+  /* border: 1px solid dodgerblue; */
+  display: flex;
+  justify-content: center;
+}
+
+main.main div.btns div.btn{
+  border: 2px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+main.main div.btns div.btn:nth-child(2){
+  background-color: black;
+}
+}
+
+/* ------ 文章二 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+
+  main.main div.bigpictwo{
+    /* border: 4px solid darkblue; */
+    width: 100%;
+    padding:0 20px 10PX;
+  }
+  
+  main.main div.bigpictwo div.img_block{
+    /* border: 2px solid darkmagenta; */
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+  
+  main.main div.bigpictwo div.img_block > img{
+    /* border: 1px solid rgb(230, 230, 189); */
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo > p{
+    /* border: 3px solid darkgreen; */
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  margin: 20px auto;
+  line-height: 25px;
+  padding: 13px;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo{
+    /* border:1px solid darkgoldenrod; */
+    padding-bottom: 80px;
+  }
+  
+  main.main div.bigpictwo div.most_img{
+    /* border: 3px solid darkgoldenrod; */
+    text-align: center;
+    width: 100%;
+    /* padding:5px; */
+    /* margin-right: 15px; */
+  }
+  
+  main.main div.bigpictwo div.most_img > img{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    /* border: 1px solid chocolate; */
+    margin: 20px 0px;
+    /* margin-left: 15px; */
+  }
+  
+  
+  /* ============ img btn ========== */
+  
+  main.main div.btns{
+    /* border: 1px solid dodgerblue; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  main.main div.btns div.btn{
+    border: 2px solid black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  main.main div.btns div.btn:nth-child(2){
+    /* background-color: black; */
+  }
+  }
+
+  /* ------ 文章二 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  main.main div.bigpictwo{
+    /* border: 4px solid darkblue; */
+    width: 100%;
+    padding:0 20px 10PX;
+  }
+  
+  main.main div.bigpictwo div.img_block{
+    /* border: 2px solid darkmagenta; */
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+  
+  main.main div.bigpictwo div.img_block > img{
+    /* border: 1px solid rgb(230, 230, 189); */
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo > p{
+    /* border: 1px solid darkgreen; */
+  text-align: center;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 25px;
+  padding: 13px;
+  }
+  
+  main.main div.bigpictwo div.content_boxtwo{
+    /* border:1px solid darkgoldenrod; */
+    padding-bottom: 80px;
+  }
+  
+  main.main div.bigpictwo div.most_img{
+    /* border: 3px solid darkgoldenrod; */
+    text-align: center;
+    width: 100%;
+    /* padding:5px; */
+    /* margin-right: 15px; */
+  }
+  
+  main.main div.bigpictwo div.most_img > img{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    /* border: 1px solid chocolate; */
+    margin: 20px 0px;
+    /* margin-left: 15px; */
+  }
+  
+  
+  /* ============ img btn ========== */
+  
+  main.main div.btns{
+    /* border: 1px solid dodgerblue; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  main.main div.btns div.btn{
+    border: 2px solid black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  main.main div.btns div.btn:nth-child(2){
+    background-color: black;
+  }
+}
+
+/* ============ footer ========== */
+
+footer{
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+footer div.footer_flex {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  min-width: 1200px;
+  
+}
+
+footer div.customer {
+  /* border: 2px solid purple; */
+}
+
+footer div.customer ul {
+  padding: 0;
+}
+
+footer div.customer ul li > a {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(50, 50, 50);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+footer div.customer ul > li {
+  list-style: none;
+}
+
+
+footer div.connection ul > li {
+  list-style: none;
+}
+
+footer div.connection ul {
+  padding: 0;
+}
+
+footer div.community p {
+  width: 150px;
+  margin: 0 auto;
+}
+
+footer div.community p a {
+  margin: 0 10px;
+}
+
+footer div.community p a > img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p.reference {
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(255, 45, 45);
+  font-weight: bold;
+  margin:10px auto;
+}
+
+/* ------ footer 375px - 575.98px------ */
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 100%;
+   }
+}
+
+
+/*-------footer 575.98 --------*/
+@media screen and (max-width:575.98px){
+  footer{
+    /* border: 1px solid saddlebrown; */
+    width: 100%;
+    
+  }
+
+  footer div.footer_flex{
+    display: grid;
+    row-gap: 20px;
+    justify-content: flex-start;
+  }
+
+  footer div.customer{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer div.connection{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer p.reference{
+    /* border: 1px solid red ; */
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+/* ------ footer 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+  
+  footer div.footer_flex {
+   /* border: 3px solid darkblue; */
+    min-width: 550px;
+  }
+  
+}
+
+/* ---- footer 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  footer div.footer_flex {
+    /* border: 3px solid darkblue; */
+     min-width: 600px;
+   }
+}
+
+/* ---- footer 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 600px;
+   }
+  }

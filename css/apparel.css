@@ -1,0 +1,1215 @@
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ececec;
+  font-family: "Libre Caslon Text", serif;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+/* ========= 導覽列 =========== */
+header.header{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header.header div.block {
+  /* border: 1px solid rebeccapurple; */
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 3px #cccccc;
+  /* margin: 0 auto; */
+
+}
+
+header.header nav.nav {
+  /* border: 1px solid darkgreen; */
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header.header nav.nav a.logo {
+  width: 140px;
+  height: 60px;
+  margin: 0;
+}
+
+header.header nav.nav a.logo > img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 200px;
+  height: 50px;
+  margin-top: 4px;
+}
+/* ========== 漢堡按鈕 ============ */
+header.header nav.nav span{
+  display: none;
+  /* border: 1px solid violet; */
+  width: 35px;
+  height: 35px;
+  /* background-color: black; */
+  margin-left: 15px;
+  position: relative;
+}
+
+header.header nav.nav span::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0px 7px 0px black, 0px -7px 0px black;
+  
+}
+
+  /* ========== 隱藏側邊攔 ========= */
+  div.flex_box{
+    
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 62px;
+    z-index: 2;
+    height: 100%;
+    /* transform: translateX(-100%); */
+  }
+
+  main.main div.leftone{
+    width: 400px;
+    background-color: #fff;
+    max-height: calc(100vh - 61px);
+    overflow: auto;
+  }
+
+  div.rightone{
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    opacity: 20%;
+  }
+
+  main.main ul.ul_list {
+    /* border: 1px solid blue; */
+    margin: 0;
+    max-width: 200px;
+    padding: 0;
+  }
+  
+  main.main ul.ul_list > li {
+    /* border: 1px solid salmon; */
+    list-style: none;
+    position: relative;
+  }
+  
+  main.main ul.ul_list li:hover ul{
+    display: block;
+  }
+  
+  main.main ul.ul_list li > a {
+    /* border: 1px solid darkgreen; */
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    display: inline-block;
+    margin: 15px;
+    
+  }
+/* ========== 隱藏側邊攔 三角形 ======== */
+main.main ul.ul_list li > a::after{
+  content:'';
+  display: inline-block;
+  border: 5px solid ;
+  border-color: black transparent transparent transparent;
+  top:24px;
+  right: 15px;
+  position: absolute;
+}
+/* ============ 導覽列 選單 ========= */
+
+header.header ul.ul_list {
+  /* border: 1px solid purple; */
+  display: flex;
+  margin: 0;
+  
+}
+
+header.header ul.ul_list > li {
+  /* border: 1px salmon; */
+  list-style: none;
+
+}
+
+header.header ul.ul_list li:hover ul{
+  display: block;
+}
+
+header.header ul.ul_list li > a {
+  /* border: 1px solid darkgreen; */
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  transform: scale(1, 1);
+  display: inline-block;
+  margin: 0 30px;
+  margin-top: 20px;
+}
+/* ================ */
+header.header ul.essay{
+  /* border: 1px solid red; */
+  position: absolute;
+  padding: 0;
+  background-color: white;
+  top: 65%;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 2px #cccccc;
+  display: none;
+  
+  
+}
+
+
+header.header ul.essay li{
+  padding: 0;
+  /* border: 1px solid blue; */
+  list-style: none;
+  /* padding-bottom: 15px; */
+}
+
+header.header ul.essay li > a{
+  padding-bottom: 15px;
+  font-size: 14PX;
+}
+
+
+
+header.header ul.ul_list li a:hover {
+  color: rgb(103, 103, 103);
+  transform: scale(1.1);
+}
+
+/* ============ 導覽列 icon ========= */
+header.header div.nav_icon {
+  display:flex;
+  align-items: center;
+  /* border: 1px solid darkgreen; */
+  text-align: center;
+  max-width: 200px;
+}
+
+header.header div.nav_icon a {
+  display: inline-block;
+  text-decoration: none;
+  /* border: 1px solid darkgreen; */
+}
+
+header.header div.nav_icon a img {
+  /* border: 1px solid darkorchid; */
+  display: inline-block;
+  margin: 4px 6px;
+  width: 23px;
+  height: 23px;
+}
+/*-------------- nav 575.98 -------------  */
+
+@media screen and (max-width: 575.98px) {
+  header.header div.block {
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+  }
+
+  header.header nav.nav span{
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+  
+  header.header div.nav_icon a:nth-child(2){
+    display: none; 
+  }
+
+  header.header nav.nav a.logo > img {
+    /* margin-left: 40px; */
+    /* border: 1px solid darkgoldenrod; */
+  }
+
+  header.header div.nav_icon {
+   /* border: 1px solid darkblue; */
+  }
+
+  header.header nav.nav a.logo{
+    /* border: 1px solid forestgreen; */
+    /* width: 100px; */
+  }
+  
+  div.flex_box{
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on{
+    transform: translateX(0%);
+  }
+
+  div.flex_box ul.ul_list>li a{
+    
+  }
+
+  div.down{
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span{
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a{
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+}
+
+/* ------ nav 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+/* ========= 首頁 / 潮流話題 / 球鞋激推 =========== */
+
+
+main.main div.sort ul.sort_display {
+  margin: 0;
+  /* border: 1px solid green; */
+  padding: 0;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+main.main div.sort ul.sort_display li {
+  list-style: none;
+  /* border: 1px solid darkblue; */
+  margin-left: 10px;
+}
+
+main.main div.sort ul.sort_display li > a:hover{
+  color: gray
+}
+
+main.main div.sort ul.sort_display li::before {
+  content: "/";
+  
+}
+
+main.main div.sort ul.sort_display > li:first-child::before {
+  display: none;
+}
+
+main.main ul.sort_display > li a :hover{
+  color: aqua;
+}
+
+main.main div.sort ul.sort_display li > a {
+  /* border: 1px solid  blueviolet; */
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+/* ============ 左側欄 ========== */
+main.main div.apparel_flex{
+  /* border: 1px solid red; */
+  display: flex;
+  background-color: #fff;
+}
+main.main div.apparel_flex div.left{
+  /* border: 1px solid blue; */
+  width: 290px;
+  padding: 20px;
+}
+
+main.main div.apparel_flex div.left ul.ul_list{
+  /* border: 1px solid black ; */
+  padding: 0;
+  margin-left: 20px;
+  
+}
+
+main.main div.apparel_flex div.left ul.ul_list li{
+  /* border: 1px solid darkorange; */
+  list-style: none;
+  margin-bottom: 12px;
+  position: relative;
+
+}
+
+main.main div.apparel_flex div.left ul.ul_list li > a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 12px;
+  
+}
+/* ============ 三角形 ========== */
+
+main.main div.apparel_flex div.left ul.ul_list li > a::after{
+  content:'';
+  display: inline-block;
+  border: 5px solid ;
+  border-color: black transparent transparent transparent;
+  top:20px;
+  right: 15px;
+  position: absolute;
+}
+
+/* ============ 右側欄 ========== */
+
+main.main div.apparel_flex div.right{
+  /* border: 1px solid darkmagenta; */
+  width: calc(100% - 290px);
+ 
+}
+
+div.right div.product_list{
+  /* border: 2px solid darkblue; */
+  max-width: 1200px;
+}
+
+main.main div.apparel_flex div.right div.product_list{
+  /* border: 2px solid darkgreen; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+main.main div.apparel_flex div.right div.product_list > span{
+  /* border: 2px solid  darkred; */
+  display: inline-block;
+  font-size: 24px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main.main div.apparel_flex div.right div.rightlist{
+  /* border: 1px solid black; */
+  font-size: 0;
+}
+
+main.main div.apparel_flex div.right div.rightlist > span{
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 150px;
+}
+/* ============ img ========== */
+
+main.main div.apparel_flex div.right div.card{
+  /* border: 2px solid darkolivegreen; */
+  max-width: 298px;
+  margin-bottom: 20px;
+   position: relative;
+}
+
+main.main div.apparel_flex div.right div.card a > img{
+  /* border: 2px solid rebeccapurple; */
+  height: 294px;
+  width: 100%;
+  /* overflow: hidden; */
+  /* vertical-align: bottom; */
+ 
+}
+
+main.main div.apparel_flex div.right div.card div.price{
+  /* border: 2px solid rgb(222, 222, 14); */
+  width: 100%;
+  height: 135px;
+}
+
+main.main div.img_flex div.price > h3{
+  text-align: center;
+  width: 100%;
+  height: 47px;
+}
+
+main.main div.img_flex div.price > p{
+  /* border: 2px solid darkorange; */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  /* padding: 3px; */
+  
+}
+
+main.main div.img_flex div.price > p:last-child{
+  font-size: 14px;
+  text-decoration: line-through;
+  /* margin-bottom: 5px; */
+}
+
+main.main div.img_flex{
+  /* border: 2px solid darkblue; */
+  display: grid;
+  grid-template-columns: repeat(3, auto);;
+  column-gap: 20px;
+  max-width: 1415px;
+}
+
+div.card > a {
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+/* =========== img hover背景 ============ */
+div.card a > span{
+ display: block;
+ /* border: 1px solid rgb(21, 125, 2); */
+ width:297px;
+ position: absolute;
+ top: 0;
+ height: 295px;
+ opacity: 40%;
+}
+
+div.card a > span:hover{
+  background-color: black;
+  
+} 
+
+/* =========== 購物車按鈕 ============ */
+.cart_button{
+  /* border: 2px solid darkolivegreen; */
+}
+
+.add_cart{
+  border:1px solid black;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add_cart:hover{
+  background-color: black;
+  color: white;
+}
+
+ /* ====== 左右側欄 575.98px ======= */
+
+@media screen and (max-width: 575.98px){
+  main.main div.left{
+    display: none;
+  }
+
+  /* ============ 右側欄 ========== */
+
+main.main div.apparel_flex div.right{
+  /* border: 2px solid darkmagenta; */
+  width: 100%;
+ 
+}
+
+
+main.main div.apparel_flex div.right div.product_list{
+  /* border: 2px solid darkgreen; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  
+}
+
+main.main div.apparel_flex div.right div.product_list > span{
+  margin-left: 20px;
+}
+
+main.main div.apparel_flex div.right div.rightlist{
+  /* border: 1px solid black; */
+  font-size: 0;
+}
+
+/* ============ img ========== */
+
+
+main.main div.apparel_flex div.right div.card a > img{
+  /* border: 2px solid rebeccapurple; */
+  height: 290px;
+  width: 298px;
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+main.main div.img_flex div.price > p:last-child{
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+main.main div.img_flex{
+  display: block;
+}
+
+main.main div.apparel_flex div.right div.card{
+  /* border: 1px solid darkolivegreen; */
+  max-width: 298px;
+  margin-bottom: 20px;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+
+main.main div.img_flex div.price > h3{
+  text-align: center;
+  
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+}
+
+/* ------ 左右側欄 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+  
+  main.main div.left{
+    display: none;
+  }
+
+  /* ============ 右側欄 ========== */
+
+main.main div.apparel_flex div.right{
+  /* border: 2px solid darkmagenta; */
+  width: 100%;
+ 
+}
+
+
+main.main div.apparel_flex div.right div.product_list{
+  /* border: 2px solid darkgreen; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  
+}
+
+main.main div.apparel_flex div.right div.product_list > span{
+  margin-left: 20px;
+}
+
+main.main div.apparel_flex div.right div.rightlist{
+  /* border: 1px solid black; */
+  font-size: 0;
+}
+
+/* ============ img ========== */
+
+
+main.main div.apparel_flex div.right div.card a > img{
+  /* border: 2px solid rebeccapurple; */
+  height: 240px;
+  width: 248px;
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+main.main div.img_flex div.price > p:last-child{
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+main.main div.img_flex{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+main.main div.apparel_flex div.right div.card{
+  /* border: 1px solid darkolivegreen; */
+  max-width: 248px;
+  margin-bottom: 20px;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+
+main.main div.img_flex div.price > h3{
+  text-align: center;
+  
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+
+div.card a > span{
+  display: block;
+  /* border: 1px solid rgb(21, 125, 2); */
+  width:248px;
+  position: absolute;
+  top: 0;
+  height: 240px;
+  opacity: 40%;
+ }
+}
+
+/* ---- 左右側欄 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  
+  main.main div.left{
+    display: none;
+  }
+
+  /* ============ 右側欄 ========== */
+
+main.main div.apparel_flex div.right{
+  /* border: 2px solid darkmagenta; */
+  width: 100%;
+ 
+}
+
+
+main.main div.apparel_flex div.right div.product_list{
+  /* border: 2px solid darkgreen; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  
+}
+
+main.main div.apparel_flex div.right div.product_list > span{
+  margin-left: 20px;
+}
+
+main.main div.apparel_flex div.right div.rightlist{
+  /* border: 1px solid black; */
+  font-size: 0;
+}
+
+/* ============ img ========== */
+
+
+main.main div.apparel_flex div.right div.card a > img{
+  /* border: 2px solid rebeccapurple; */
+  height: 240px;
+  width: 248px;
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+main.main div.img_flex div.price > p:last-child{
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+main.main div.img_flex{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+main.main div.apparel_flex div.right div.card{
+  /* border: 1px solid darkolivegreen; */
+  max-width: 248px;
+  margin-bottom: 20px;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+
+main.main div.img_flex div.price > h3{
+  text-align: center;
+  
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+
+div.card a > span{
+  display: block;
+  /* border: 1px solid rgb(21, 125, 2); */
+  width:248px;
+  position: absolute;
+  top: 0;
+  height: 240px;
+  opacity: 40%;
+ }
+}
+
+
+
+/* ---- 左右側欄 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+  main.main div.left{
+    display: none;
+  }
+
+  /* ============ 右側欄 ========== */
+
+main.main div.apparel_flex div.right{
+  /* border: 2px solid darkmagenta; */
+  width: 100%;
+ 
+}
+
+
+main.main div.apparel_flex div.right div.product_list{
+  /* border: 2px solid darkgreen; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  
+}
+
+main.main div.apparel_flex div.right div.product_list > span{
+  margin-left: 20px;
+}
+
+main.main div.apparel_flex div.right div.rightlist{
+  /* border: 1px solid black; */
+  font-size: 0;
+}
+
+/* ============ img ========== */
+
+
+main.main div.apparel_flex div.right div.card a > img{
+  /* border: 2px solid rebeccapurple; */
+  height: 290px;
+  width: 298px;
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+
+main.main div.img_flex div.price > p:last-child{
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+main.main div.img_flex{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+main.main div.apparel_flex div.right div.card{
+  /* border: 1px solid darkolivegreen; */
+  max-width: 298px;
+  margin-bottom: 20px;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+
+main.main div.img_flex div.price > h3{
+  text-align: center;
+  
+}
+
+main.main div.img_flex div.price > p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  
+}
+}
+
+/* ============ footer ========== */
+
+footer{
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+footer div.footer_flex {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  min-width: 1200px;
+  
+}
+
+footer div.customer {
+  /* border: 2px solid purple; */
+}
+
+footer div.customer ul {
+  padding: 0;
+}
+
+footer div.customer ul li > a {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(50, 50, 50);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+footer div.customer ul > li {
+  list-style: none;
+}
+
+
+footer div.connection ul > li {
+  list-style: none;
+}
+
+footer div.connection ul {
+  padding: 0;
+}
+
+footer div.community p {
+  width: 150px;
+  margin: 0 auto;
+}
+
+footer div.community p a {
+  margin: 0 10px;
+}
+
+footer div.community p a > img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p.reference {
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(255, 45, 45);
+  font-weight: bold;
+  margin:10px auto;
+}
+
+/* ------ footer 375px - 575.98px------ */
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 100%;
+   }
+}
+
+
+/*-------footer 575.98 --------*/
+@media screen and (max-width:575.98px){
+  footer{
+    /* border: 1px solid saddlebrown; */
+    width: 100%;
+    
+  }
+
+  footer div.footer_flex{
+    display: grid;
+    row-gap: 20px;
+    justify-content: flex-start;
+  }
+
+  footer div.customer{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer div.connection{
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer p.reference{
+    /* border: 1px solid red ; */
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+/* ------ footer 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+  
+  footer div.footer_flex {
+   /* border: 1px solid darkblue; */
+    min-width: 500px;
+  }
+  
+}
+
+/* ---- footer 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 600px;
+   }
+}
+
+/* ---- footer 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+  footer div.footer_flex {
+    /* border: 1px solid darkblue; */
+     min-width: 600px;
+   }
+  }

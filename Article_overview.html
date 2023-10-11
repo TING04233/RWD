@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文章</title>
+  <!--=========== 自己的css========== -->
+  <link rel="stylesheet" href="./css/Article_overview.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- ==========Google font======== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Roboto:wght@300&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ============ header ========= -->
+  <header class="header">
+    <div class="block">
+      <nav class="nav">
+        <span class="ham_btn"></span>
+        <a href="#" class="logo"><img src="./images/icon/logo.svg" /></a>
+        <!-- ============ 導覽列 選單  ========= -->
+        <ul class="ul_list">
+          <li>
+            <a href="#">潮流話題</a>
+            <ul class="essay">
+              <li><a href="#">穿搭講堂</a></li>
+              <li><a href="./essay.html">球鞋激推</a></li>
+              
+            </ul>
+          </li>
+          <li>
+            <a href="#">熱銷系列</a>
+            <ul class="essay">
+              <li><a href="#">PUMA X RIPDIP聯名</a></li>
+              <li><a href="#">ADIADS ULTRABOOST</a></li>
+              <li><a href="#">NIKE DUNK</a></li>
+              <li><a href="#">NEW BALANCE 327</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">品牌</a>
+            <ul class="essay">
+              <li><a href="#">NIKE</a></li>
+              <li><a href="#">ADIDAS</a></li>
+              <li><a href="#">PUMA</a></li>
+              <li><a href="#">CONVERSE</a></li>
+              <li><a href="#">SKECHERS</a></li>
+              <li><a href="#">NEW BALANCE</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./apparel.html">男款</a>
+            <ul class="essay">
+              <li><a href="./apparel.html">短袖上衣</a></li>
+              <li><a href="#">長袖上衣</a></li>
+              <li><a href="#">運動背心</a></li>
+              <li><a href="#">短褲</a></li>
+              <li><a href="#">鞋類</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./shoes.html">女款</a>
+            <ul class="essay">
+              <li><a href="#">短袖上衣</a></li>
+              <li><a href="#">運動內衣</a></li>
+              <li><a href="#">運動背心</a></li>
+              <li><a href="#">短褲</a></li>
+              <li><a href="./shoes.html">鞋類</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">兒童</a>
+          </li>
+          <li><a href="#">配件</a></li>
+        </ul>
+        <!-- ============ 導覽列 icon ========= -->
+        <div class="nav_icon">
+          <a href="#"
+            ><img src="./images/icon/search.svg" alt="search-ico"
+          /></a>
+          <a href="#"><img src="./images/icon/chat.svg" alt="chat" /></a>
+          <a href="./login.html"><img src="./images/icon/person.svg" alt="people" /></a>
+          <a href="./shopcart.html"
+            ><img src="./images/icon/shopping_bag.svg" alt="bag"
+          /></a>
+          
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="sort">
+      <ul class="sort_display">
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">潮流話題</a></li>
+        <li><a href="#">球鞋激推</a></li>
+
+      </ul>
+    </div>
+    <!-- ============ 隱藏側邊攔 ========= -->
+    <section>
+      <div class="flex_box">
+      <div class="left">
+        <ul class="ul_list">
+          <li>
+            <a href="#" class="dropdown">潮流話題</a>
+            <div class="down">
+              <span><a href="#">穿搭講堂</a></span>
+              <span><a href="./essay.html">球鞋激推</a></span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="dropdown">熱銷系列</a>
+            <div class="down">
+              <span><a href="#">PUMA X RIPDIP聯名</a></span>
+              <span><a href="#">ADIADS ULTRABOOST</a></span>
+              <span><a href="#">NIKE DUNK</a></span>
+              <span><a href="#">NEW BALANCE 327</a></span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="dropdown">品牌</a>
+            <div class="down">
+              <span><a href="#">NIKE</a></span>
+              <span><a href="#">ADIDAS</a></span>
+              <span><a href="#">PUMA</a></span>
+              <span><a href="#">CONVERSE</a></span>
+              <span><a href="#">SKECHERS</a></span>
+              <span><a href="#">NEW BALANCE</a></span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="dropdown">男款</a>
+            <div class="down">
+              <span><a href="./apparel.html">短袖上衣</a></span>
+              <span><a href="#">長袖上衣</a></span>
+              <span><a href="#">運動背心</a></span>
+              <span><a href="#">短褲</a></span>
+              <span><a href="#">鞋類</a></span>
+            </div>
+          </li>
+          <li>
+            <a href="./shoes.html" class="dropdown">女款</a>
+            <div class="down">
+              <span><a href="#">短袖上衣</a></span>
+              <span><a href="#">運動內衣</a></span>
+              <span><a href="#">運動背心</a></span>
+              <span><a href="#">短褲</a></span>
+              <span><a href="./shoes.html">鞋類</a></span>
+            </div>
+          </li>
+          <li><a href="#">兒童</a></li>
+          <li><a href="#">配件</a></li>
+        </ul>
+      </div>
+      <div class="right"></div>
+    </div>
+    </section>
+   
+    <!-- ============ 文章一 ========= -->
+    <div class="theme">
+      <h1>日本傳統工藝展現出眾細節！知名球鞋設計師推出 sacai x Nike LDWaffle「刺子繡」</h1>
+    </div>
+
+    <div class="bigpic">
+      <img src="./images/Article_overview pic/1.svg" alt="pic1">
+      <div class="content_box">
+        <p>知名菲律賓裔美籍球鞋設計師 ANT KAI,憑藉著一款特別改製的 Off-White x Nike Dunk Low 一夕爆紅，成為聞名球鞋圈的知名客製師。回顧 ANT KAI
+          一手打造的作品，從基本的改色、繪畫再到材質變化、仿舊處理，皆展現出眾的手做工藝，其中將日本傳統元素「刺子繡」融入於球鞋的特殊設計，更是 ANT KAI 數不清的作品中，最具人氣的一個系列。</p>
+      </div>
+    </div>
+    <!-- ============ 照片 按鈕 ========= -->
+    <div class="bigpictwo">
+      <div class="img_block">
+        <img class="bigImg" src="./images/Article_overview pic/2.jpg" alt="pic2">
+      </div>
+      <div class="most_img">
+        <img class="simg" src="./images/Article_overview pic/2.jpg" alt="pic3">
+        <img class="simg" src="./images/Article_overview pic/3.jpg" alt="pic4">
+        <img class="simg" src="./images/Article_overview pic/4.jpg" alt="pic5">
+        <img class="simg" src="./images/Article_overview pic/5.jpg" alt="pic6">
+        <img class="simg" src="./images/Article_overview pic/6.jpg" alt="pic7">
+
+        <div class="btns">
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+
+      </div>
+      <!-- ============ 文章二 ========= -->
+      <div class="content_boxtwo">
+        <p>近期 ANT KAI 接連釋出了幾款結合「刺子繡」的改造作品，以 sacai x Nike LDWaffle 與 New Balance 2002R
+          等兩款具有街頭討論話題的鞋款為主軸，將這象徵日本傳統技藝的「刺子繡」設計注入於代表西方現代文化的球鞋中，傳統手法與前衛的鞋履相互碰撞，激發出蘊含細節與兼具外觀的帥氣鞋款，設計精湛度堪比藝術品。</p>
+
+        <p>最先曝光的 sacai x Nike LDWaffle “Boro”
+          整體皆採用丹寧布料，深淺不同的水洗牛仔布以多層次方式拼接而成，上頭輔以外露式縫線與日本傳統圖騰點綴，彰顯出博大精深的工藝精隨，尤其麻繩鞋帶的加入，更達到畫龍點睛的效果，展現出十足的藝術氛圍；另一款 “Dark
+          Indigo Boro” 延續上一雙的美學概念，不過材質與花紋有所不同，因為是以 CLOT 三方聯名「K.O.D2」配色改造的關係,生膠底的呈現,勾勒出一股濃厚的復古懷舊感,搭配「刺子繡」也是十分匹配。</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- =============== footer ============= -->
+  <footer>
+    <div class="footer_flex">
+      <div class="customer">
+        <h4>顧客服務</h4>
+        <ul>
+          <li><a href="#">購物須知</a></li>
+          <li><a href="#">售後服務</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+      <!-- =============== footer icon============= -->
+      <div class="connection">
+        <h4>聯絡我們</h4>
+        <ul>
+          <li>電子信箱: a791933@gmail.com</li>
+          <li>服務時間: 周一到週五 11:00~21:30</li>
+        </ul>
+        <div class="community">
+          <p>
+            <a href="#"><img src="./images/icon/facebook.svg" alt="facebook" /></a>
+            <a href="#"><img src="./images/icon/instagram.svg" alt="facebook" /></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="reference">
+      本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+    </p>
+  </footer>
+  <script src="./JavaScript/Article_overview.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1344 @@
+* {
+  box-sizing: border-box;
+ /* outline : 1px solid red */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ececec;
+  font-family: "Libre Caslon Text", serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ========= 導覽列 =========== */
+header.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header.header div.block {
+  /* border: 1px solid rebeccapurple; */
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 3px #cccccc;
+  /* margin: 0 auto; */
+}
+
+header.header nav.nav {
+  /* border: 1px solid darkgreen; */
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header.header nav.nav a.logo {
+  width: 140px;
+  height: 60px;
+  margin: 0;
+}
+
+header.header nav.nav a.logo > img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 200px;
+  height: 50px;
+  margin-top: 4px;
+}
+/* ========== 漢堡按鈕 ============ */
+header.header nav.nav span {
+  display: none;
+  /* border: 1px solid violet; */
+  width: 35px;
+  height: 35px;
+  /* background-color: black; */
+  margin-left: 15px;
+  position: relative;
+}
+
+header.header nav.nav span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0px 7px 0px black, 0px -7px 0px black;
+}
+
+/* ========== 隱藏側邊攔 ========= */
+div.flex_box {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 62px;
+  z-index: 2;
+  height: 100%;
+  /* transform: translateX(-100%); */
+}
+
+main.main div.left {
+  width: 400px;
+  background-color: #fff;
+  max-height: calc(100vh - 61px);
+  overflow: auto;
+}
+
+div.right {
+  border: 1px solid rebeccapurple;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  opacity: 20%;
+}
+
+main.main ul.ul_list {
+  /* border: 1px solid blue; */
+  margin: 0;
+  max-width: 200px;
+  padding: 0;
+}
+
+main.main ul.ul_list > li {
+  /* border: 1px solid salmon; */
+  list-style: none;
+  position: relative;
+}
+
+main.main ul.ul_list li:hover ul {
+  display: block;
+}
+
+main.main ul.ul_list li > a {
+  /* border: 1px solid darkgreen; */
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  display: inline-block;
+  margin: 15px;
+}
+/* ========== 隱藏側邊攔 三角形 ======== */
+main.main ul.ul_list li > a::after {
+  content: "";
+  display: inline-block;
+  border: 5px solid;
+  border-color: black transparent transparent transparent;
+  top: 24px;
+  right: 15px;
+  position: absolute;
+}
+/* ============ 導覽列 選單 ========= */
+
+header.header ul.ul_list {
+  /* border: 1px solid purple; */
+  display: flex;
+  margin: 0;
+}
+
+header.header ul.ul_list > li {
+  /* border: 1px salmon; */
+  list-style: none;
+}
+
+header.header ul.ul_list li:hover ul {
+  display: block;
+}
+
+header.header ul.ul_list li > a {
+  /* border: 1px solid darkgreen; */
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  transform: scale(1, 1);
+  display: inline-block;
+  margin: 0 30px;
+  margin-top: 20px;
+}
+/* ================ */
+header.header ul.essay {
+  /* border: 1px solid red; */
+  position: absolute;
+  padding: 0;
+  background-color: white;
+  top: 65%;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 2px #cccccc;
+  display: none;
+}
+
+header.header ul.essay li {
+  padding: 0;
+  /* border: 1px solid blue; */
+  list-style: none;
+  /* padding-bottom: 15px; */
+}
+
+header.header ul.essay li > a {
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+header.header ul.ul_list li a:hover {
+  color: rgb(103, 103, 103);
+  transform: scale(1.1);
+}
+
+/* ============ 導覽列 icon ========= */
+header.header div.nav_icon {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid darkgreen; */
+  text-align: center;
+  max-width: 200px;
+}
+
+header.header div.nav_icon a {
+  display: inline-block;
+  text-decoration: none;
+  /* border: 1px solid darkgreen; */
+}
+
+header.header div.nav_icon a img {
+  /* border: 1px solid darkorchid; */
+  display: inline-block;
+  margin: 4px 6px;
+  width: 23px;
+  height: 23px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 575.98px){
+  
+}
+/*-------------- nav 575.98 -------------  */
+
+@media screen and (max-width: 575.98px) {
+  header.header div.block {
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.flex_box ul.ul_list > li a {
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ------ nav 577px - 767px------ */
+@media (min-width:577) and (max-width:767){
+  header.header div.block {
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.flex_box ul.ul_list > li a {
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+/* ------ nav 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- nav 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  header.header div.block {
+    /* border: 1px solid darkblue; */
+    width: 100%;
+  }
+
+  header.header nav.nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  header.header nav.nav span {
+    /* border: 1px solid darkblue; */
+    display: block;
+    margin-top: 10px;
+  }
+
+  header.header ul.ul_list {
+    display: none;
+  }
+
+  div.flex_box {
+    display: flex;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  div.flex_box.-on {
+    transform: translateX(0%);
+  }
+
+  div.down {
+    /* border: 1px solid darkred; */
+    margin-left: 30px;
+  }
+
+  div.down span {
+    /* border: 1px solid rebeccapurple; */
+    display: block;
+  }
+
+  div.down span > a {
+    display: block;
+    /* border:1px solid darkcyan; */
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    /* width: 200px; */
+    /* margin-left: 20px; */
+    padding: 7px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ========= banner 輪播圖=========== */
+main.main {
+  /* border: 3px solid darkgreen; */
+  margin-top: 20px;
+  /* margin-bottom: 40px; */
+}
+
+main.main section.sec {
+  /* border: 1px solid darkblue; */
+  margin-bottom: 30px;
+}
+
+div.outer {
+  /* border: 5px solid red; */
+  width: 1200px;
+  height: 470px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+div.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+div.inner a {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+div.inner a > img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+ul.contentButton {
+  max-width: 1200px;
+  /* border: 1px solid darkblue; */
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+  justify-content: center;
+  position: absolute;
+  top: 42%;
+  /* left: 46%; */
+  right: 0%;
+}
+
+ul.contentButton li {
+  border: 2px solid white;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+ul.contentButton li.clicked {
+  background-color: black;
+}
+
+
+  
+
+/*--------- banner 575.98 -----------*/
+
+@media screen and (max-width: 575.98px) {
+  main.main {
+    /* border: 3px solid darkgreen; */
+    margin-top: 20px;
+    /* margin-bottom: 40px; */
+  }
+
+  main.main section.sec {
+    /* border: 1px solid darkblue; */
+    margin-bottom: 30px;
+  }
+
+  div.outer {
+    /* border: 5px solid red; */
+    width: 364px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  div.inner {
+    /* border: 2px solid darkblue; */
+    width:450px;
+    }
+
+    div.inner a{
+      width: 450px;
+    }
+
+    div.inner a > img {
+      width: 450px;
+      /* transform: translate(-30%); */
+      /* object-fit: cover; */
+    }
+  }
+
+/*---- banner 576px - 767.98px --------*/
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.main {
+    /* border: 3px solid darkgreen; */
+    margin-top: 20px;
+    /* margin-bottom: 40px; */
+    overflow: hidden;
+  }
+
+  main.main section.sec {
+    /* border: 1px solid darkblue; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 570px;
+  }
+
+  div.outer {
+    /* border: 5px solid red; */
+    width: 570x;
+    height: 350px;
+    margin-left: auto;
+  }
+
+  div.inner {
+    /* border: 2px solid darkblue; */
+    width:100%;
+    }
+
+    div.inner a > img {
+      width: 570px;
+      /* transform: translate(-30%); */
+      /* object-fit: cover; */
+    }
+
+    ul.contentButton {
+      width:50px;
+      /* border: 1px solid darkblue; */
+      padding: 0;
+      margin: 0;
+      /* display: flex; */
+      justify-content: center;
+      position: absolute;
+      top: 42%;
+      left: 46%;
+      /* right: 0%; */
+    }
+  }
+
+
+/* ---- banner 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  main.main {
+    /* border: 3px solid darkgreen; */
+    margin-top: 20px;
+    /* margin-bottom: 40px; */
+    overflow: hidden;
+  }
+
+  main.main section.sec {
+    /* border: 1px solid darkblue; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 700px;
+  }
+
+  div.outer {
+    /* border: 5px solid red; */
+    width: 700x;
+    height: 350px;
+    margin-left: auto;
+  }
+
+  div.inner {
+    /* border: 2px solid darkblue; */
+    width:100%;
+    }
+
+    div.inner a > img {
+      width: 700px;
+      /* transform: translate(-30%); */
+      /* object-fit: cover; */
+    }
+
+    ul.contentButton {
+      width:100%;
+      /* border: 1px solid darkblue; */
+      padding: 0;
+      margin: 0;
+      /* display: flex; */
+      justify-content: center;
+      position: absolute;
+      top: 42%;
+      left:56%;
+      /* right: 0%; */
+    }
+}
+
+/* ---- banner 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  main.main {
+    /* border: 3px solid darkgreen; */
+    margin-top: 20px;
+    /* margin-bottom: 40px; */
+    overflow: hidden;
+  }
+
+  main.main section.sec {
+    /* border: 1px solid darkblue; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 1000px;
+  }
+
+  div.outer {
+    /* border: 5px solid red; */
+    width: 1000x;
+    height: 350px;
+    margin-left: auto;
+  }
+
+  div.inner {
+    /* border: 2px solid darkblue; */
+    width:100%;
+    }
+
+    div.inner a > img {
+      width: 1000px;
+      /* transform: translate(-30%); */
+      /* object-fit: cover; */
+    }
+
+    ul.contentButton {
+      width:100%;
+      /* border: 1px solid darkblue; */
+      padding: 0;
+      margin: 0;
+      /* display: flex; */
+      justify-content: center;
+      position: absolute;
+      top: 42%;
+      left: 81%;
+      /* right: 30%; */
+    }
+}
+/* ============ section pic ========= */
+
+section ul.pic {
+  /* border: 3px solid rebeccapurple; */
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+section ul.pic li.list {
+  /* border: 2px solid aqua; */
+  list-style: none;
+  text-align: center;
+  max-width: 500px;
+}
+
+section ul.pic li.list a > img {
+  /* border: 1px solid darkred; */
+  max-width: 100%;
+}
+
+section ul.pic li.list.nike a > img {
+  display: inline-block;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+section ul.pic li.list.nike {
+  margin-left: 25px;
+}
+
+section ul.pic li.list > a {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+section ul.pic li.list a > h2 {
+  /* border: 1px solid darkgreen; */
+  margin: 0;
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+section ul.pic li.kid {
+  margin-left: 25px;
+}
+
+section ul.pic li.list p {
+  /* border: 1px solid blue; */
+  background-color: #a1c4fd;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  padding-left: 16px;
+  width: 105px;
+  height: 35px;
+  margin: 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+/* ============ shop 三角形 ========= */
+section ul.pic li.list p::after {
+  content: "";
+  display: inline-block;
+  /* width: 10px; */
+  /* height: 10px; */
+  border: 10px solid;
+  border-color: transparent transparent transparent white;
+  margin-left: 10px;
+  position: absolute;
+  top: 7px;
+}
+
+/*---------- sec pic 575.98----------*/
+
+@media screen and (max-width: 575.98px) {
+  section ul.pic {
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  section ul.pic li.list a > h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  section ul.pic li.list.nike {
+    margin: 0;
+  }
+
+  section ul.pic li.kid {
+    margin: 0;
+  }
+}
+/* ------ sec 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section ul.pic li.list {
+    padding: 10px;
+    width: 500px;
+  }
+
+  section ul.pic li.list a > img {
+    width: 100%;
+  }
+
+  section ul.pic li.list > a {
+    font-size: 25px;
+  }
+
+  section ul.pic li.list a > h2 {
+    font-size: 22px;
+  }
+}
+
+/* ---- sec 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  section ul.pic {
+    /* border: 3px solid rebeccapurple; */
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  section ul.pic li.list {
+    /* border: 2px solid aqua; */
+    list-style: none;
+    text-align: center;
+    width: 500px;
+    padding: 10px;
+  }
+
+  section ul.pic li.list a > img {
+    /* border: 1px solid darkred; */
+    max-width: 100%;
+  }
+
+  section ul.pic li.list.nike a > img {
+    display: inline-block;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  section ul.pic li.list a > h2 {
+    font-size: 30px;
+  }
+
+  section ul.pic li.kid {
+    margin-left: 25px;
+  }
+}
+/* ============ shop 三角形 ========= */
+section ul.pic li.list p::after {
+  content: "";
+  display: inline-block;
+  /* width: 10px; */
+  /* height: 10px; */
+  border: 10px solid;
+  border-color: transparent transparent transparent white;
+  margin-left: 10px;
+  position: absolute;
+  top: 7px;
+}
+
+/* ============ 服裝 ========== */
+
+div.shirt_text h2 {
+  /* border: 2px solid black; */
+  text-align: center;
+  font-size: 40px;
+}
+
+/* ============ 服飾文章 ========== */
+
+article.card {
+  /* border: 3px solid darkgreen; */
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 1150px;
+}
+
+section div.shirt_text {
+  /* background-color: rgb(163, 159, 159); */
+}
+
+section div.img_block {
+  /* border: 1px solid purple; */
+  width: 360px;
+  height: 380px;
+  position: relative;
+
+  margin: 0 10px 45px;
+}
+
+section div.img_block span.box {
+  display: block;
+  /* border: 3px solid saddlebrown; */
+  height: 250px;
+  position: absolute;
+  width: 360px;
+  bottom: -30px;
+  background-color: white;
+}
+
+section div.img_block a img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+section div.content_box {
+  /* border: 3px solid darkgreen; */
+  width: 330px;
+  height: 250px;
+  background-color: white;
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  z-index: 1;
+  padding: 15px;
+}
+
+section div.content_box span {
+  font-size: 10px;
+  color: rgb(50, 50, 50);
+}
+
+section div.content_box h3 {
+  font-size: 25px;
+  margin: 10px 0px;
+}
+
+section div.content_box h3 a {
+  text-decoration: none;
+  color: black;
+}
+
+section div.content_box p {
+  color: rgb(50, 50, 50);
+  display: block;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+section div.read {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+section div.read a {
+  text-decoration: none;
+  color: goldenrod;
+}
+/*-----------服飾文章 575.98--------*/
+@media screen and (max-width: 575.98px) {
+  article.card {
+    width: 100%;
+    display: grid;
+    row-gap: 30px;
+  }
+
+  section div.img_block {
+    /* border: 1px solid darkblue; */
+    /* margin:  auto; */
+  }
+
+  section div.read {
+    /* border: 1px solid teal; */
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---- 服飾文章 576px - 767.98px------ */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* ============ 服裝 ========== */
+
+  div.shirt_text h2 {
+    font-size: 30px;
+  }
+
+  /* ============ 服飾文章 ========== */
+
+  article.card {
+    /* border: 3px solid darkgreen; */
+    display: grid;
+    grid-template-columns: auto auto;
+    /* column-gap: 40px; */
+    max-width: 100%;
+  }
+
+  section div.shirt_text {
+    /* background-color: rgb(163, 159, 159); */
+  }
+
+  section div.img_block {
+    /* border: 2px solid purple; */
+    width: 290px;
+    height: 330px;
+    position: relative;
+    /* margin-right: 10px; */
+
+    margin: 0 10px 45px;
+  }
+
+  section div.img_block span.box {
+    display: block;
+    /* border: 3px solid saddlebrown; */
+    height: 200px;
+    position: absolute;
+    width: 290px;
+    bottom: -30px;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+  }
+
+  section div.img_block a img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+
+  section div.content_box {
+    /* border: 3px solid darkgreen; */
+    width: 280px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    z-index: 1;
+    padding: 15px;
+  }
+
+  section div.content_box span {
+    font-size: 12px;
+    color: rgb(50, 50, 50);
+  }
+
+  section div.content_box h3 {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+
+  section div.content_box h3 a {
+    text-decoration: none;
+    color: black;
+  }
+
+  section div.content_box p {
+    color: rgb(50, 50, 50);
+    display: block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  section div.read {
+    /* border: 1px solid darkblue; */
+    display: none;
+  }
+
+  section div.read a {
+    /* border: 1px solid darkcyan; */
+    text-decoration: none;
+    color: goldenrod;
+  }
+}
+
+/* ---- 服飾文章 768px - 991.98px------ */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* ============ 服裝 ========== */
+
+  div.shirt_text h2 {
+    font-size: 30px;
+  }
+
+  /* ============ 服飾文章 ========== */
+
+  article.card {
+    /* border: 3px solid darkgreen; */
+    display: grid;
+    grid-template-columns: auto auto;
+    /* column-gap: 40px; */
+    max-width: 100%;
+  }
+
+  section div.img_block {
+    /* border: 1px solid purple; */
+    width: 360px;
+    height: 390px;
+  }
+
+  section div.img_block span.box {
+    /* border: 3px solid saddlebrown; */
+    height: 250px;
+    width: 360px;
+    margin-bottom: 20px;
+  }
+
+  section div.img_block a img {
+    width: 100%;
+  }
+
+  section div.content_box {
+    /* border: 3px solid darkgreen; */
+    width: 330px;
+    height: 250px;
+  }
+
+  section div.content_box span {
+    font-size: 12px;
+    color: rgb(50, 50, 50);
+  }
+
+  section div.content_box h3 {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+  section div.read {
+    /* border: 1px solid darkblue; */
+    display: none;
+  }
+}
+
+/* ---- 服飾文章 992px - 1199.98px------ */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  /* ============ 服裝 ========== */
+
+  div.shirt_text h2 {
+    font-size: 30px;
+  }
+
+  /* ============ 服飾文章 ========== */
+
+  article.card {
+    /* border: 3px solid darkgreen; */
+    display: grid;
+    grid-template-columns: auto auto;
+    /* column-gap: 40px; */
+    max-width: 100%;
+  }
+
+  section div.img_block {
+    /* border: 1px solid purple; */
+    width: 360px;
+    height: 390px;
+  }
+
+  section div.img_block span.box {
+    /* border: 3px solid saddlebrown; */
+    height: 250px;
+    width: 360px;
+    margin-bottom: 20px;
+  }
+
+  section div.img_block a img {
+    width: 100%;
+  }
+
+  section div.content_box {
+    /* border: 3px solid darkgreen; */
+    width: 330px;
+    height: 250px;
+  }
+
+  section div.content_box span {
+    font-size: 12px;
+    color: rgb(50, 50, 50);
+  }
+
+  section div.content_box h3 {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+  section div.read {
+    /* border: 1px solid darkblue; */
+    display: none;
+  }
+}
+
+/* ============ footer ========== */
+
+footer {
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+footer div.footer_flex {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  max-width: 1200px;
+}
+
+footer div.customer {
+  /* border: 2px solid purple; */
+}
+
+footer div.customer ul {
+  padding: 0;
+}
+
+footer div.customer ul li > a {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(50, 50, 50);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+footer div.customer ul > li {
+  list-style: none;
+}
+
+footer div.connection ul > li {
+  list-style: none;
+}
+
+footer div.connection ul {
+  padding: 0;
+}
+
+footer div.community p {
+  width: 150px;
+  margin: 0 auto;
+}
+
+footer div.community p a {
+  margin: 0 10px;
+}
+
+footer div.community p a > img {
+  width: 20px;
+  height: 20px;
+}
+
+footer p.reference {
+  /* border: 1px solid darkblue; */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(255, 45, 45);
+  font-weight: bold;
+  margin: 10px auto;
+}
+/*-------footer 575.98 --------*/
+@media screen and (max-width: 575.98px) {
+  footer {
+    /* border: 1px solid saddlebrown; */
+    width: 100%;
+  }
+
+  footer div.footer_flex {
+    display: grid;
+    row-gap: 20px;
+    justify-content: flex-start;
+  }
+
+  footer div.customer {
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer div.connection {
+    /* border: 1px solid darkorange; */
+    margin-left: 20px;
+  }
+
+  footer p.reference {
+    /* border: 1px solid red ; */
+    width: 100%;
+    padding: 8px;
+  }
+}
